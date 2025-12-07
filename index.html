@@ -1,0 +1,42 @@
+<html><body>
+
+<div>
+<p>
+  Configuration file:
+</p>
+</div>
+<p>
+<div id="ovpn-status">
+  Unknown
+</div>
+<div id="ovpn-upload" style="display: block;">
+  <form action="./cgi-bin/upload.sh?ovpn" enctype="multipart/form-data" method="post">
+    <input type="file" name="client.ovpn">
+    <input type="submit" value="Upload">
+  </form>
+</div>
+<div id="ovpn-download" style="display: none;">
+  <a href="./cgi-bin/download.sh?ovpn" download="client.ovpn">Download</a>
+</div>
+</p>
+<div>
+<p>
+  Username/Password file:
+</p>
+</div>
+<p>
+<div id="text-status">
+  Unknown
+</div>
+<div id="text-upload" style="display: block;">
+  <form action="./cgi-bin/upload.sh?text" enctype="multipart/form-data" method="post">
+    <input type="file" name="client.text">
+    <input type="submit" value="Upload">
+  </form>
+</div>
+<div id="text-download" style="display: none;">
+  <a href="./cgi-bin/download.sh?text" download="client.text">Download</a>
+</div>
+</p>
+<script src="index.js"></script>
+</body></html>
