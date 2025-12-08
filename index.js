@@ -1,4 +1,4 @@
-var str = ""
+var statuses = ""
 
 function reqListener() {
   statuses = this.responseText;
@@ -6,19 +6,31 @@ function reqListener() {
   // .ovpn file
   if (status[0].endsWith("YES")) {
     document.getElementById("ovpn-status").innerHTML = "Uploaded";
-    document.getElementById("ovpn-download").style.display = "block";
+    document.getElementById("ovpn-status").style.backgroundColor = "#88ff88";
+    document.getElementById("ovpn-download").style.display = "inline-block";
   } else {
     document.getElementById("ovpn-status").innerHTML = "Missing";
+    document.getElementById("ovpn-status").style.backgroundColor = "#ff8888";
     document.getElementById("ovpn-download").style.display = "none";
   }
   // .text file
   if (status[1].endsWith("YES")) {
     document.getElementById("text-status").innerHTML = "Uploaded";
-    document.getElementById("text-download").style.display = "block";
+    document.getElementById("text-status").style.backgroundColor = "#88ff88";
+    document.getElementById("text-download").style.display = "inline-block";
   } else {
     document.getElementById("text-status").innerHTML = "Missing";
+    document.getElementById("text-status").style.backgroundColor = "#ff8888";
     document.getElementById("text-download").style.display = "none";
   }
+}
+
+function downloadHover (element) {
+  document.getElementById(element).style.backgroundColor = "#016194";
+}
+
+function downloadOut (element) {
+  document.getElementById(element).style.backgroundColor = "#009ac7";
 }
 
 var req = new XMLHttpRequest();

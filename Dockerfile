@@ -9,7 +9,7 @@ RUN apk add --no-cache openvpn lighttpd
 RUN mkdir /cgi-bin
 
 # Web server data
-COPY lighttpd.conf index.html index.js /
+COPY lighttpd.conf index.html index.js addon.css /
 COPY cgi-bin/*sh /cgi-bin
 RUN chmod a+x /cgi-bin/*.sh
 

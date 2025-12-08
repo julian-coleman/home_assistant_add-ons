@@ -1,42 +1,46 @@
+<!DOCTYPE html>
 <html><body>
 
-<div>
-<p>
+<link rel="stylesheet" type="text/css" media="screen" href="addon.css">
+
+<div class="addon-content">
+
+  <div class="addon-bold">
   Configuration file:
-</p>
-</div>
-<p>
-<div id="ovpn-status">
+  </div>
+  <div class="addon-status" id="ovpn-status">
   Unknown
-</div>
-<div id="ovpn-upload" style="display: block;">
-  <form action="./cgi-bin/upload.sh?ovpn" enctype="multipart/form-data" method="post">
-    <input type="file" name="client.ovpn">
-    <input type="submit" value="Upload">
-  </form>
-</div>
-<div id="ovpn-download" style="display: none;">
-  <a href="./cgi-bin/download.sh?ovpn" download="client.ovpn">Download</a>
-</div>
-</p>
-<div>
-<p>
+  </div>
+  <div class="addon-upload" id="ovpn-upload" style="display: inline;">
+    <form action="./cgi-bin/upload.sh?ovpn" enctype="multipart/form-data" method="post">
+      <input type="file" name="client.ovpn">
+      <input type="submit" value="Upload">
+    </form>
+  </div>
+  <a href="./cgi-bin/download.sh?ovpn" download="client.ovpn">
+    <div class="addon-download" id="ovpn-download" onmouseover="downloadHover('ovpn-download')" onmouseout="downloadOut('ovpn-download')" style="display: none;">
+      Download
+    </div>
+  </a>
+
+  <div class="addon-bold">
   Username/Password file:
-</p>
-</div>
-<p>
-<div id="text-status">
+  </div>
+  <div class="addon-status" id="text-status">
   Unknown
-</div>
-<div id="text-upload" style="display: block;">
-  <form action="./cgi-bin/upload.sh?text" enctype="multipart/form-data" method="post">
-    <input type="file" name="client.text">
-    <input type="submit" value="Upload">
-  </form>
-</div>
-<div id="text-download" style="display: none;">
-  <a href="./cgi-bin/download.sh?text" download="client.text">Download</a>
-</div>
-</p>
-<script src="index.js"></script>
+  </div>
+  <div class="addon-upload" id="text-upload" style="display: inline;">
+    <form action="./cgi-bin/upload.sh?text" enctype="multipart/form-data" method="post">
+      <input type="file" name="client.text">
+      <input type="submit" value="Upload">
+    </form>
+  </div>
+  <a href="./cgi-bin/download.sh?text" download="client.text">
+    <div class="addon-download" id="text-download" onmouseover="downloadHover('text-download')" onmouseout="downloadOut('text-download')" style="display: none;">
+      Download
+    </div>
+  </a>
+
+</div> <!-- addon-content -->
+  <script src="index.js"></script>
 </body></html>
