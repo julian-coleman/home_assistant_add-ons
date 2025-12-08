@@ -1,0 +1,73 @@
+body {
+  font-family: sans-serif;
+  font-size: 13px;
+  background-color: #eeeeee;
+}
+
+div.addon-content {
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #888888;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+div.addon-bold {
+  padding: 10px 10px 10px 10px;
+  font-weight: bold;
+}
+
+div.addon-status {
+  display: inline-block;
+  padding: 8px 16px 8px 16px;
+  margin: 2px 2px 2px 2px;
+  font-weight: normal;
+  background-color: #eeeeee;
+  border-radius: 15px;
+}
+
+div.addon-status-good {
+  background-color: #88ff88;
+}
+
+div.addon-status-bad {
+  background-color: #ff8888;
+}
+
+div.addon-upload {
+  input {
+    display: inline-block;
+    margin: 2px 2px 2px 2px;
+    font-weight: normal;
+    background-color: #009ac7;
+    border: 0px;
+    border-radius: 15px;
+    color: #ffffff;
+  }
+  input:hover {
+    background-color: #016194;
+    cursor: pointer;
+  }
+  input[type=submit] {
+    padding: 8px 16px 8px 16px;
+  }
+  input[type=file] {
+    padding: 5px 16px 6px 16px;
+  }
+}
+
+div.addon-button {
+  display: inline-block;
+  padding: 8px 16px 8px 16px;
+  margin: 2px 2px 2px 2px;
+  font-weight: normal;
+  background-color: #009ac7;
+  border-radius: 15px;
+  color: #ffffff;
+  a:link {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  a:visited {
+    text-decoration: none;
+    color: #ffffff;
+  }

@@ -33,11 +33,11 @@ function reqListener() {
   }
 }
 
-function downloadHover (element) {
+function buttonHover (element) {
   document.getElementById(element).style.backgroundColor = "#016194";
 }
 
-function downloadOut (element) {
+function buttonOut (element) {
   document.getElementById(element).style.backgroundColor = "#009ac7";
 }
 
