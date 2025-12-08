@@ -48,5 +48,6 @@ while true; do
     echo Starting OpenVPN
     echo $BIN $PARAMS
     $BIN $PARAMS || true
+    rm -f $PID
     sleep 60
 done
