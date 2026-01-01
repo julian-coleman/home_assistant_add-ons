@@ -16,7 +16,7 @@ rm -f $PID
 
 # Run the web server
 echo Starting web server
-lighttpd -f /lighttpd.conf
+lighttpd -D -f /lighttpd.conf &
 
 # Do we have a tunnel device?
 if [ -e $TUN ]; then
