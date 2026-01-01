@@ -12,18 +12,18 @@ PID=/openvpn.pid
 DEF_PARAMS="--writepid $PID --config $OVPN"
 
 date
+rm -f $PID
 
 # Run the web server
 echo Starting web server
 lighttpd -f /lighttpd.conf
 
 # Do we have a tunnel device?
-if [ -e /dev/net/tun ]; then
+if [ -e $TUN ]; then
     echo Tunnel device found
 else
-    echo Creating tunnel device
-    mkdir -p /dev/net
-    mknod /dev/net/tun c 10 200
+    echo Tunnel device missing
+    # mknod $TUN c 10 200
 fi
 
 # Are the configuration files available?
