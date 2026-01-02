@@ -2,7 +2,7 @@
 
 ## 0.9.0
 
-- Add czech translations
+- Add czech translations and language/jazyk option
 
 ## 0.8.0
 

@@ -11,10 +11,24 @@ BIN=/usr/sbin/openvpn
 PID=/openvpn.pid
 DEF_PARAMS="--writepid $PID --config $OVPN"
 
+CONFIG_PATH=/data/options.json
+
 # Log with date and time
 __BASHIO_LOG_TIMESTAMP="%Y-%m-%d %H:%M:%S"
 
 rm -f $PID
+
+# Check our options
+OPT_LANG="$(bashio::config 'language')"
+
+if [ "$OPT_LANG" = "Česky" ]; then
+    INDEX_HTML=index_cs.html
+    bashio::log.info Jazyk: česky
+else
+    INDEX_HTML=index.html
+    bashio::log.info Language: english
+fi
+export INDEX_HTML
 
 # Run the web server
 bashio::log.info Starting web server

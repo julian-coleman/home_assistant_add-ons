@@ -1,0 +1,4 @@
+configuration:
+  language:
+    name: Jazyk
+    description: Jazyk webového stranků v doplňku

@@ -14,3 +14,7 @@ map:
 host_network: true
 privileged:
   - NET_ADMIN
+options:
+  language: English
+schema:
+  language: list(Česky|English)

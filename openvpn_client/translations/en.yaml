@@ -1,0 +1,4 @@
+configuration:
+  language:
+    name: Language
+    description: The language of the web pages inside the add-on

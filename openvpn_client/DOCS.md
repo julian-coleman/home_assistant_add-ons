@@ -15,6 +15,8 @@ For each file, use **Browse** to select the file on the local file system, then 
 
 The add-on checks every minute for configuration files and starts OpenVPN when they are found.  After the files are uploaded, OpenVPN should start within a minute.  The current status can be checked using the **Reload** button.
 
+If the language is changed after the add-on has been started, use the **Reload** button.
+
 If the configuration files are changed, the add-on will not automatically restart OpenVPN.  **Restart** from the main add-on page to restart the add-on with the new configuration.
 
 Add-on Logs
@@ -37,6 +39,8 @@ Lze zvolit jazyk doplňku v stránce **Nastavení**.  Defaultní jazyk je anglic
 Pro každý soubor použijte **Browse** k výběru souboru v lokálním souborovém systému a pak jeho **Nahrát**.
 
 Doplněk každou minutu kontroluje konfigurační soubory a po jejich nalezení spustí OpenVPN.  Po nahrání souborů by se OpenVPN měl spustit do minuty.  Aktuální stav lze zkontrolovat pomocí tlačítka **Znovu načíst**.
+
+Jestli se zmení jazyk po spuštení doplňku, použijte tlačítko **Znovu načíst**.
 
 Pokud se konfigurační soubory změní, doplněk OpenVPN automaticky nerestartuje. **Restartovat** z hlavní stránky doplňku, abyste doplněk restartovali s novou konfigurací.
 
