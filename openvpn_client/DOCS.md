@@ -7,6 +7,8 @@ Configuration files can be uploaded and downloaded via the add-on web page.
 Add-on Configuration
 --------------------
 
+The language of the add-on can be selected from the add-on **Configuration** page.  The default is english.
+
 **Install**, then **Start** the add-on and **Open web UI**.  The web UI shows the status of the OpenVPN files and the OpenVPN process.  The two files are the main configuration file (.ovpn) and the username/password file (.text).
 
 For each file, use **Browse** to select the file on the local file system, then **Upload** it.
@@ -28,11 +30,13 @@ Tento doplněk spouští OpenVPN pomocí poskytnuté konfigurace.  Konfiguračn�
 Konfigurace doplňku
 -------------------
 
+Lze zvolit jazyk doplňku v stránce **Nastavení**.  Defaultní jazyk je anglicky.
+
 **Nainstalovat**, pak **Spustit** a **Otevřít webové rozhraní**.  Webové rozhraní zobrazuje stav souborů OpenVPN a proces OpenVPN. Dva soubory jsou hlavní konfigurační soubor (.ovpn) a soubor s uživatelským jménem/heslem (.text).
 
-Pro každý soubor použijte **Browse** k výběru souboru v lokálním souborovém systému a pak jeho **Upload**.
+Pro každý soubor použijte **Browse** k výběru souboru v lokálním souborovém systému a pak jeho **Nahrát**.
 
-Doplněk každou minutu kontroluje konfigurační soubory a po jejich nalezení spustí OpenVPN.  Po nahrání souborů by se OpenVPN měl spustit do minuty.  Aktuální stav lze zkontrolovat pomocí tlačítka **Reload**.
+Doplněk každou minutu kontroluje konfigurační soubory a po jejich nalezení spustí OpenVPN.  Po nahrání souborů by se OpenVPN měl spustit do minuty.  Aktuální stav lze zkontrolovat pomocí tlačítka **Znovu načíst**.
 
 Pokud se konfigurační soubory změní, doplněk OpenVPN automaticky nerestartuje. **Restartovat** z hlavní stránky doplňku, abyste doplněk restartovali s novou konfigurací.
 

@@ -18,10 +18,10 @@ html_end () {
                 echo Nahrávání se zdařilo
             ;;
             unknown)
-                echo Nahrávání se nezdařilo: chybí název souboru
+                echo Nahrávání se nezdařilo: neznámá konfigurace
             ;;
             missing)
-                echo Nahrávání se nezdařilo: neznámá konfigurace
+                echo Nahrávání se nezdařilo: chybí název souboru
             ;;
             wrong)
                 echo Nahrávání se nezdařilo: nesprávný typ souboru: $line
