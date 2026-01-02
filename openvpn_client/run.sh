@@ -11,27 +11,29 @@ BIN=/usr/sbin/openvpn
 PID=/openvpn.pid
 DEF_PARAMS="--writepid $PID --config $OVPN"
 
-date
+# Log with date and time
+__BASHIO_LOG_TIMESTAMP="%Y-%m-%d %H:%M:%S"
+
 rm -f $PID
 
 # Run the web server
-echo Starting web server
+bashio::log.info Starting web server
 lighttpd -D -f /lighttpd.conf &
 
 # Do we have a tunnel device?
 if [ -e $TUN ]; then
-    echo Tunnel device found
+    bashio::log.info Tunnel device found
 else
-    echo Tunnel device missing
+    bashio::log.warning Tunnel device missing
     # mknod $TUN c 10 200
 fi
 
 # Are the configuration files available?
-echo Looking for configuration
+bashio::log.info Looking for configuration
 found=0
 while true; do
     if [ -r $OVPN ]; then
-        echo "Found configuration file(s):"
+        bashio::log.info "Found configuration file(s):"
         found=1
         ls -l $OVPN
         PARAMS="$DEF_PARAMS"
@@ -43,21 +45,20 @@ while true; do
     if [ $found -eq 1 ]; then
         break
     fi
-    echo Waiting for configuration file
+    bashio::log.info Waiting for configuration
     sleep 60
-    date
 done
 
 # Run OpenVPN
 while true; do
-    echo Starting OpenVPN
+    bashio::log.info Starting OpenVPN
     PARAMS="$DEF_PARAMS"
     if [ -r $TEXT ]; then
         PARAMS="$PARAMS --auth-user-pass $TEXT"
     fi
-    echo $BIN $PARAMS
+    bashio::log.info $BIN $PARAMS
     $BIN $PARAMS || true
     rm -f $PID
-    echo Waiting for restart
+    bashio::log.info Waiting for restart
     sleep 60
 done
